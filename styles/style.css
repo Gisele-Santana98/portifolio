@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Criando variáveis para Css */
+:root{
+    --cor-primaria: #050505;
+    --cor-secundaria: #f1e1e1;
+    --cor-terciaria: #8368e7;
+    --cor-hover: #897db4;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{  /*  Retirando bordas e margens da pag */
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    /* height: 100%;  Definindo altura da página */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 1% 0% 0% 10%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao{
+    padding: 3% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+     gap: 20px; /* Especifica o tamanho dos espaços entre linhas e colunas em grid, flex e multi-column.*/
+
+}
+
+.apresentacao__conteudo__titulo{
+    /* A fonte será tranformada de px para rem, para dar responsividade a página, para tranformar, divide o número de px por 16, pois 16px = 1rem */
+    font-size: 1.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.125rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.apresentacao__itens{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.125rem;
+    
+}
+
+.apresentacao__botao{
+    /* background-color: #3674B5; */
+    border: 2px dotted var(--cor-terciaria);
+    ; /* Deixando a borda pontilhada */
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    font-weight: 600 ;
+    padding: 5px 0;
+    text-decoration: none; /* Retirando o hiperlink dos botões */
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__botao:hover{
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__botao__icon{
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+}
+
+img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+} 
+
+.apresentacao__imagem{
+    width: 40%;
+    height:40%;
+}
+
+.rodape{
+    padding: 15px;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1000px){
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+}
